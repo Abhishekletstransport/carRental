@@ -66,9 +66,6 @@ class CardDetailsComponent extends Component {
       carTypeFilter,
     } = this.state;
 
-    const ans = ['hi', 'hello'].reduce((acc, curr) => (acc[curr] = true))
-    console.log("--ans---",ans);
-
     return (transmissionFilter.length  ? transmissionFilter.filter(val => val === transmission).length: true) &&
     (fuelTypeFilter.length  ? fuelTypeFilter.filter(val => val === fuel_Type).length: true) &&
     (carTypeFilter.length  ? carTypeFilter.filter(val => val === car_Type).length: true)
