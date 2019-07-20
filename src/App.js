@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {render} from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import customRenderer from './routes/customRenderer.js';
+import LoaderComponent from './components/loaderComponent';
+import routes from './routes';
+import store from './store';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const AppWithRouter = () => (
+  <Provider store={ store }>
+    <Router>
+      <LoaderComponent />
+      {
+        customRenderer(routes)
+      }
+    </Router>
+  </Provider>
+);
 
-export default App;
+const bootstrapper = {
+  start() {
+    render(
+        <AppWithRouter />,
+        document.getElementById('root')
+    );
+  },
+};
+
+export default bootstrapper;

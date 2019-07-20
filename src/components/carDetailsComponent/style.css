@@ -1,0 +1,11 @@
+.searchBox{
+  display: flex;
+  align-items: center;
+}
+.carDetailsDiv{
+  width: 100vw;
+  height: 100vh;
+}
+.displayAllDiv{
+  padding: 40px;
+}

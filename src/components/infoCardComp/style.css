@@ -1,0 +1,53 @@
+.photoDiv{
+  width: 100px;
+  height: 100px;
+}
+.imgCar{
+  width: 100%;
+  height: 100%;
+}
+.containerDiv{
+  display: flex;
+  flex-direction: row;
+}
+.infoDiv{
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.leftContainer{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.rightContainer{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.availabilityBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.availableBtn{
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+.notAvailableBtn{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: antiquewhite;
+}
+.booked{
+  border: 1px solid;
+}
+.disable{
+  background-color: aliceblue;
+}

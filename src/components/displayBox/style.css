@@ -1,0 +1,15 @@
+.labelDiv{
+  padding-right: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.valueDiv{
+  flex: 1;
+}
+.sideDiv{
+  padding: 5px;
+  align-items: center;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
